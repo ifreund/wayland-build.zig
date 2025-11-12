@@ -8,7 +8,7 @@
             .hash = "N-V-__8AAGoeGQBEn6KguTJUXrCE0tIRrrXfQX7hYHoKCJwZ",
         },
         .libffi = .{
-            .url = "git+https://codeberg.org/vezel/libffi.git#bc3e8ef3c661f0114c9cd71dcc26ad88fa33bcc6",
+            .url = "git+https://codeberg.org/vezel/libffi.git#3aac158d09755844f1d9892e86512e9afbbd6c37",
             .hash = "libffi-3.5.2-7_tEtNc5FwAWDaCWKtJ6Mh4eEWn8poybcaMRLhIOtag8",
             .lazy = true,
         },
@@ -18,8 +18,8 @@
             .lazy = true,
         },
         .libxml2 = .{
-            .url = "git+https://github.com/allyourcodebase/libxml2.git?ref=2.14.3-4#86c4742a9becd6c86dc79180f806ed344fd2a727",
-            .hash = "libxml2-2.14.3-4-qHdjhn9FAACpyisv_5DDFVQlegox6QE3mTpdlr44RcbT",
+            .url = "git+https://github.com/allyourcodebase/libxml2.git?ref=2.15.1#532cdc21c1c25b2f3f63ed355392b80cc405cbe0",
+            .hash = "libxml2-2.15.1-qHdjhi9MAADPDiXFeNsWnUmr03JdmfAnVMNmcnL28rzM",
             .lazy = true,
         },
     },
