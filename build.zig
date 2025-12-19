@@ -116,6 +116,7 @@ pub fn build(b: *std.Build) void {
                 .target = target,
                 .optimize = optimize,
                 .link_libc = true,
+                .pic = true,
             }),
         });
         wayland_private.root_module.addIncludePath(wayland_header2.dirname());
@@ -368,6 +369,7 @@ fn createWaylandUtil(
             .target = target,
             .optimize = optimize,
             .link_libc = true,
+            .pic = true,
         }),
     });
     wayland_util.installHeader(wayland.path("src/wayland-util.h"), "wayland-util.h");
