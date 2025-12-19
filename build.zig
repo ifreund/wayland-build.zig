@@ -57,12 +57,14 @@ pub fn build(b: *std.Build) void {
         if (b.lazyDependency("libexpat", .{
             .target = target,
             .optimize = optimize,
+            .linkage = linkage,
         })) |expat| {
             wayland_scanner.root_module.linkLibrary(expat.artifact("expat"));
         }
         if (b.lazyDependency("libexpat", .{
             .target = b.graph.host,
             .optimize = optimize,
+            .linkage = linkage,
         })) |expat_host| {
             wayland_scanner_host.root_module.linkLibrary(expat_host.artifact("expat"));
         }
@@ -136,6 +138,7 @@ pub fn build(b: *std.Build) void {
         } else if (b.lazyDependency("libffi", .{
             .target = target,
             .optimize = optimize,
+            .linkage = linkage,
         })) |libffi| {
             wayland_private.root_module.linkLibrary(libffi.artifact("ffi"));
         }
@@ -232,6 +235,7 @@ pub fn build(b: *std.Build) void {
         } else if (b.lazyDependency("libffi", .{
             .target = target,
             .optimize = optimize,
+            .linkage = linkage,
         })) |libffi| {
             wayland_server.root_module.linkLibrary(libffi.artifact("ffi"));
         }
@@ -282,6 +286,7 @@ pub fn build(b: *std.Build) void {
         } else if (b.lazyDependency("libffi", .{
             .target = target,
             .optimize = optimize,
+            .linkage = linkage,
         })) |libffi| {
             wayland_client.root_module.linkLibrary(libffi.artifact("ffi"));
         }
